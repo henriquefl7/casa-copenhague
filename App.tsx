@@ -44,13 +44,13 @@ const App: React.FC = () => {
       <main>
         <Hero />
         
-        {/* Intro Quote */}
-        <section className="py-12 text-center px-6">
+        {/* Intro Quote - Ajuste de margens negativas sutis para mobile */}
+        <section className="py-8 md:py-20 text-center px-6">
           <div className="max-w-4xl mx-auto">
-            <h3 className="text-3xl md:text-5xl font-light italic text-stone-500 leading-relaxed serif">
+            <h3 className="text-xl md:text-5xl font-light italic text-stone-500 leading-relaxed serif">
               "Um projeto onde a iluminação natural dita o ritmo do dia, as áreas fluidas abraçam a convivência e a sustentabilidade garante o futuro."
             </h3>
-            <div className="mt-6 w-24 h-1 bg-amber-600 mx-auto opacity-30"></div>
+            <div className="mt-4 md:mt-6 w-12 md:w-24 h-1 bg-amber-600 mx-auto opacity-30"></div>
           </div>
         </section>
 
@@ -59,7 +59,7 @@ const App: React.FC = () => {
         <TechnicalShowcase />
 
         {/* Interior Highlight */}
-        <section className="h-[500px] md:h-[700px] relative overflow-hidden">
+        <section className="h-[350px] md:h-[700px] relative overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img 
               src={CORE_INFO.amplitudeImage} 
@@ -69,16 +69,15 @@ const App: React.FC = () => {
                 (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1600607687940-47a000df3d48?auto=format&fit=crop&q=80&w=1600";
               }}
             />
-            {/* Overlay para legibilidade */}
             <div className="absolute inset-0 bg-stone-900/50"></div>
           </div>
           
           <div className="relative z-10 h-full flex items-center justify-center p-6">
             <div className="max-w-3xl text-center text-white">
-              <span className="text-amber-500 font-bold uppercase tracking-widest text-sm mb-4 block">Amplitude & Luz Real</span>
-              <h2 className="text-4xl md:text-6xl font-bold mb-6 serif italic">Pé Direito Alto. Inspiração sem Limites.</h2>
-              <p className="text-xl font-light leading-relaxed text-stone-100 drop-shadow-lg">
-                Sinta a verdadeira amplitude e o ar fresco circulando livremente por cada m², reduzindo custos de manutenção e elevando seu bem-estar diário.
+              <span className="text-amber-500 font-bold uppercase tracking-widest text-[9px] md:text-sm mb-2 md:mb-4 block">Amplitude & Luz Real</span>
+              <h2 className="text-2xl md:text-6xl font-bold mb-3 md:mb-6 serif italic">Pé Direito Alto. Inspiração sem Limites.</h2>
+              <p className="text-sm md:text-xl font-light leading-relaxed text-stone-100 drop-shadow-lg max-w-2xl mx-auto">
+                Sinta a verdadeira amplitude e o ar fresco circulando livremente por cada m².
               </p>
             </div>
           </div>
@@ -89,18 +88,18 @@ const App: React.FC = () => {
         <ContactForm />
       </main>
 
-      <footer className="py-12 bg-stone-900 text-stone-500 border-t border-white/5">
+      <footer className="py-10 bg-stone-900 text-stone-500 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="text-center md:text-left">
             <p className="text-white font-bold text-xl mb-2 serif">Casa Copenhague</p>
             <p className="text-sm italic">Onde cada detalhe conta uma história de inovação.</p>
           </div>
-          <div className="flex gap-8 text-sm font-semibold uppercase tracking-widest">
+          <div className="flex gap-6 md:gap-8 text-[10px] md:text-sm font-semibold uppercase tracking-widest">
             <a href="#" className="hover:text-white transition-colors">Portfólio</a>
             <a href="#" className="hover:text-white transition-colors">Privacidade</a>
             <a href="#contato" className="hover:text-white transition-colors">Agendar Visita</a>
           </div>
-          <p className="text-xs">&copy; 2024 Projeto Exclusivo. Todos os direitos reservados.</p>
+          <p className="text-[10px]">&copy; 2026 Projeto Exclusivo. Todos os direitos reservados.</p>
         </div>
       </footer>
     </div>

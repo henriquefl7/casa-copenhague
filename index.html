@@ -5,6 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casa Copenhague | Exclusividade & Design</title>
+    
+    <!-- Meta Tags para Compartilhamento (WhatsApp, Facebook, Instagram) -->
+    <meta name="description" content="Uma residência contemporânea que une design escandinavo, sustentabilidade e alto padrão em Tubarão/SC.">
+    <meta property="og:title" content="Casa Copenhague | Onde o Design encontra o Propósito">
+    <meta property="og:description" content="Sustentabilidade, luz natural e integração total. Conheça sua nova residência de alto padrão.">
+    <meta property="og:image" content="https://lh3.googleusercontent.com/d/1fHuR5VfCJD11BZ4F9BRn_uLedn5Csyh3">
+    <meta property="og:url" content="https://casacopenhague.com.br">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#1c1917">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -12,6 +22,11 @@
           extend: {
             screens: {
               'xs': '400px',
+            },
+            colors: {
+              stone: {
+                950: '#0c0a09',
+              }
             }
           }
         }
@@ -27,6 +42,11 @@
         }
         html {
             scroll-behavior: smooth;
+        }
+        /* Ajuste fino para renderização de fontes */
+        * {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
     </style>
 <script type="importmap">
@@ -45,7 +65,6 @@
 </head>
 <body class="bg-stone-50 text-stone-900 overflow-x-hidden">
     <div id="root"></div>
-    <!-- Ponto de entrada principal para o React -->
     <script type="module" src="/index.tsx"></script>
 </body>
 </html>

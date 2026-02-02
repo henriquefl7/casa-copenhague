@@ -4,13 +4,13 @@ import { IMAGES } from '../constants';
 
 const Gallery: React.FC = () => {
   return (
-    <section id="galeria" className="py-24 bg-white">
+    <section id="galeria" className="py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-12 md:mb-16 gap-6">
           <div className="max-w-2xl">
             <span className="text-amber-600 font-bold uppercase tracking-widest text-sm mb-4 block">Lookbook Real</span>
-            <h2 className="text-4xl md:text-5xl font-bold text-stone-900 mb-6">Cada ângulo, uma nova perspectiva de luxo.</h2>
-            <p className="text-stone-600 text-lg font-light leading-relaxed">
+            <h2 className="text-3xl md:text-5xl font-bold text-stone-900 mb-4 md:mb-6">Cada ângulo, uma nova perspectiva de luxo.</h2>
+            <p className="text-stone-600 text-base md:text-lg font-light leading-relaxed">
               Explore os acabamentos premium e a harmonia entre os materiais nobres. Fotografias reais capturadas para transmitir a alma da residência.
             </p>
           </div>
@@ -22,7 +22,7 @@ const Gallery: React.FC = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto">
           {IMAGES.map((image, index) => (
             <div 
               key={index} 
@@ -39,7 +39,6 @@ const Gallery: React.FC = () => {
                 />
               </div>
               
-              {/* Overlay de Legenda */}
               <div className="absolute inset-0 bg-gradient-to-t from-stone-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
                 <p className="text-white font-medium text-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                   {image.caption}
