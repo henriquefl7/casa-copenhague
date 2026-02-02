@@ -4,32 +4,57 @@ import { BENEFITS } from '../constants';
 
 const Benefits: React.FC = () => {
   return (
-    <section id="beneficios" className="pt-12 pb-16 md:py-24 bg-stone-900 relative overflow-hidden">
-      {/* Luz ambiente de fundo para profundidade */}
-      <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_20%,rgba(245,158,11,0.03),transparent_50%)] pointer-events-none"></div>
+    <section id="beneficios" className="py-16 md:py-24 bg-[#141210] border-y border-white/5 relative overflow-hidden">
+      {/* Luz ambiente sutil de fundo */}
+      <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_20%,rgba(245,158,11,0.02),transparent_50%)] pointer-events-none"></div>
       
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="text-center mb-12 md:mb-20">
-          <span className="text-amber-500 font-bold uppercase tracking-[0.4em] text-[10px] md:text-xs mb-3 md:mb-4 block">Diferenciais Exclusivos</span>
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 md:mb-6 tracking-tight">A Experiência de Viver Bem</h2>
-          <p className="text-stone-400 text-sm md:text-lg max-w-2xl mx-auto font-light leading-relaxed">
-            Não vendemos apenas metros quadrados. Vendemos liberdade, economia e a tranquilidade de um lar tecnicamente perfeito.
-          </p>
+        
+        {/* Header Section: Aesthetic Split Layout */}
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-12 md:mb-20 gap-8 lg:gap-16">
+          <div className="flex-1">
+            <span className="text-amber-600 font-bold uppercase tracking-[0.4em] text-[10px] md:text-xs mb-4 md:mb-6 block">Proposta de Valor</span>
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight serif leading-[1.1]">
+              Excelência <br />
+              <span className="italic font-normal text-stone-300 relative">
+                em cada detalhe.
+                <span className="absolute -bottom-3 left-0 w-12 h-1.5 bg-amber-600 rounded-full"></span>
+              </span>
+            </h2>
+          </div>
+          
+          <div className="flex-1 lg:max-w-xl lg:pl-12 border-l-0 lg:border-l border-stone-800 lg:pb-2 relative">
+            {/* Small orange dash indicator from the image */}
+            <div className="absolute -bottom-3 left-12 w-8 h-1.5 bg-amber-600 rounded-full hidden lg:block"></div>
+            
+            <p className="text-stone-300 text-base md:text-lg font-light leading-relaxed">
+              Menos custos, mais liberdade e o silêncio que você merece. A harmonia perfeita entre a sofisticação e o prazer de estar em casa.
+            </p>
+          </div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
+        {/* Visual Benefit Cards (Clean Rectangles based on image) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
           {BENEFITS.map((benefit, index) => (
-            <div key={index} className="group flex flex-col items-start transition-all duration-500">
-              <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl flex items-center justify-center mb-5 md:mb-8 border border-white/10 bg-white/5 group-hover:bg-amber-500/10 group-hover:border-amber-500/30 transition-all duration-500 shadow-inner text-white group-hover:text-amber-500">
+            <div 
+              key={index} 
+              className="group p-8 md:p-10 bg-[#1c1a18] border border-white/5 rounded-[2rem] hover:bg-[#252220] transition-all duration-500 flex flex-col items-start h-full"
+            >
+              {/* Icon Container */}
+              <div className="w-12 h-12 bg-stone-800/40 border border-white/10 rounded-2xl flex items-center justify-center mb-10 group-hover:border-amber-500/40 transition-all duration-500">
                 {benefit.icon}
               </div>
-              <h3 className="text-lg md:text-xl font-bold text-white mb-2 md:mb-4 tracking-tight group-hover:text-amber-500 transition-colors">
+              
+              <h3 className="text-xl font-bold text-white mb-4 serif leading-tight tracking-tight">
                 {benefit.title}
               </h3>
-              <p className="text-stone-400 leading-relaxed font-light text-sm md:text-base">
+              
+              <p className="text-stone-400 leading-relaxed font-light text-sm md:text-base mb-10 flex-grow">
                 {benefit.description}
               </p>
-              <div className="mt-4 md:mt-6 w-8 h-[1px] bg-white/10 group-hover:w-16 group-hover:bg-amber-500/50 transition-all duration-500"></div>
+              
+              {/* Subtle line from the image */}
+              <div className="w-6 h-[1px] bg-stone-700 group-hover:bg-amber-600 transition-all duration-500"></div>
             </div>
           ))}
         </div>
